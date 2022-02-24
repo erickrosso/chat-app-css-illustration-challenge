@@ -4,48 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-  Samuel Green
-  Available to Walk
+  <main class="container">
 
-  That sounds great. I’d be happy with that.
+    <section class="phone">
 
-  Could you send over some pictures of your dog, please?
+      <section class="tela">
+        <ul class="dados">
+          <li class="face"><img  class="foto" src="images/avatar.jpg" alt=""></li>
+          <li class="dado name">Samuel Green</li>
+          <li class="dado status">Available to Walk</li>
+        </ul>
+        <ul class="chat">
+          <li class="item esq">That sounds great. I’d be happy with that.</li>
+          <li class="item esq">Could you send over some pictures of your dog, please?</li>
+          
+          <ul class="chat-dir">
+            <li class="item dir item-dog">
+              <img class="dog" src="images/dog-image-1.jpg">
+              <img class="dog" src="images/dog-image-2.jpg">
+              <img class="dog" src="images/dog-image-3.jpg">
+            </li>
+            <li class="item dir">Here are a few pictures. She’s a happy girl!</li>
+            <li class="item dir menor">Can you make it?</li>
+          </ul>
 
-  Here are a few pictures. She’s a happy girl!
+          <li class="item esq">She looks so happy! The time we discussed works. How long shall I take her out for?</li>
+          <li class="item esq"><input type="radio" name="valor">30 minute walk $29</li>
+          <li class="item esq"><input type="radio" name="valor">1 hour walk $49</li>
+        </ul>
+        <ul class="bottom">
+          <li><input class="message" placeholder="Type a message..." type="text"></li>
+          <li><input class="button" type="button" value=">"></li>
+        </ul>
+      </section>
 
-  Can you make it?
+    </section>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+    <section class="box-text">
+      <h1 class="title">Simple booking</h1>
+      <p class="text">
+        Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+        discuss arrangements and make bookings. Once the walk has been completed you can rate 
+        your walker and book again all through the chat.
+      </p>
+    </section>
 
-  30 minute walk
-  $29
+    <div class="attribution footer">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/erickrosso/chat-app-css-illustration-challenge.git">Erick de Rosso</a>.
+    </div>
 
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/erickrosso/chat-app-css-illustration-challenge.git">Erick de Rosso</a>.
-  </div>
 </body>
 </html>

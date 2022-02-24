@@ -2,7 +2,7 @@
 
 ![Design preview for the Chat app CSS illustration coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+## Welcome! 👋 ----- https://erickrosso.github.io/chat-app-css-illustration-challenge/ -----
 
 Thanks for checking out this front-end coding challenge.
 

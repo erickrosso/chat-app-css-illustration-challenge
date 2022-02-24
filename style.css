@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+}
+
+body {
+    background-color: hsl(270, 20%, 96%);
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+h6 {
+    color: #e942ff;
+    color: #8838ff;
+
+    color: hsl(0, 0%, 100%);
+    color: hsl(270, 20%, 96%);
+    color: hsl(271, 36%, 24%);
+    color: hsl(289, 100%, 72%);
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    border: 15px solid white;
+    border-radius: 40px;
+    max-width: 300px;
+    height: 600px;
+}
+
+.dados {
+    display: grid;
+    grid-template-areas: 
+    "face name"
+    "face status";
+    justify-content: center;
+    align-items: start;
+    background: rgb(136,56,255);
+    background: linear-gradient(90deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%);
+    border-radius: 20px 20px 10px 10px;
+    height: 12%;
+    color: white;
+}
+
+.face {
+    grid-area: face;
+    align-self: center;
+}
+
+.foto {
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 30px;
+}
+
+.name {
+    grid-area: name;
+    align-self: end;
+}
+
+
+.status {
+    grid-area: status;
+}
+
+.chat {
+    font-size: 10px;
+}
+
+.chat-dir {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.item {
+    background-color: hsla(293, 100%, 63%, 0.158);
+    color: hsl(293, 52%, 46%);
+    padding: 5px;
+    margin: 5px;
+    line-height: 20px;
+    
+}
+
+.esq {
+    text-align: left;
+    width: 60%;
+    border-radius: 10px 10px 10px 5px;
+}
+
+.dir {
+    text-align: right;
+    border-radius: 10px 10px 5px 10px;
+    background-color: white;
+    color: black;
+    width: 60%;
+    text-align: left;
+}
+
+.menor {
+    width: 35%;
+}
+
+.dog {
+    border-radius: 10px;
+    height: 50px;
+}
+
+.item-dog {
+    background-color: transparent;
+    padding-bottom: 0;
+    width: 100%;
+    text-align: right;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 94%;
+    background-color: white;
+    height: 40px;
+    border-radius: 100vh;
+    padding: 10px;
+    margin: 10px;
+}
+
+.message {
+    border: none;
+    width: 200px;
+}
+
+.button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: hsl(271, 36%, 24%);
+    color: white;
+    font-weight: 700;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
