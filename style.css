@@ -10,25 +10,37 @@ body {
     background-color: hsl(270, 20%, 96%);
     height: 100vh;
     width: 100vw;
-}
-
-.container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
 }
 
-h6 {
-    color: #e942ff;
-    color: #8838ff;
-
-    color: hsl(0, 0%, 100%);
-    color: hsl(270, 20%, 96%);
-    color: hsl(271, 36%, 24%);
-    color: hsl(289, 100%, 72%);
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    height: 150%;
+    background: rgb(136,56,255);
+    background: linear-gradient(45deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%);
+    border-radius: 100vh;
+    transform: translate(-100%, -40%);
 }
+
+/* Container */
+
+.container {
+    width: 62%;
+    display: grid;
+    grid-template-areas: 
+    "celular texto"
+    "footer footer";
+    align-items: center;
+    justify-content: center;
+}
+
+/* Celular */
 
 .phone {
     display: flex;
@@ -37,15 +49,30 @@ h6 {
     border-radius: 40px;
     max-width: 300px;
     height: 600px;
+    align-items: center;
+    grid-area: celular;
+    background-color: hsl(270, 20%, 96%);
+}
+
+.phone::before {
+    content: "";
+    display: inline-block;
+    width: 170px;
+    height: 35px;
+    background-color: white;
+    border-radius: 100vh;
+    position: absolute;
+    transform: translateY(-45%);
 }
 
 .dados {
     display: grid;
-    grid-template-areas: 
-    "face name"
-    "face status";
-    justify-content: center;
-    align-items: start;
+    grid-template-areas:
+    ". . . ."
+    "seta face name pontos"
+    "seta face status pontos";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: .5fr 35px 2fr .5fr;
     background: rgb(136,56,255);
     background: linear-gradient(90deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%);
     border-radius: 20px 20px 10px 10px;
@@ -54,24 +81,56 @@ h6 {
 }
 
 .face {
+    display: flex;
+    align-items: center;
     grid-area: face;
     align-self: center;
+}
+
+.dados::after {
+    content: "<";
+    font-weight: 700;
+    grid-area: seta;
+    align-self: center;
+    justify-self: end;
+    margin-right: 10px;
 }
 
 .foto {
     border-radius: 50%;
     border: 2px solid white;
     height: 30px;
+    align-self: center;
 }
 
 .name {
     grid-area: name;
     align-self: end;
+    font-size: 13px;
 }
 
 
 .status {
     grid-area: status;
+    font-size: 7px;
+    opacity: .5;
+}
+
+.pontos {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    grid-area: pontos;
+    align-self: center;
+}
+
+.pontos div{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 2px;
 }
 
 .chat {
@@ -90,7 +149,7 @@ h6 {
     padding: 5px;
     margin: 5px;
     line-height: 20px;
-    
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.096);
 }
 
 .esq {
@@ -119,9 +178,49 @@ h6 {
 
 .item-dog {
     background-color: transparent;
+    box-shadow: none;
     padding-bottom: 0;
     width: 100%;
     text-align: right;
+}
+
+.valor {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.719);
+    width: 75%;
+    line-height: 30px;
+    background: rgb(136,56,255);
+    background: linear-gradient(90deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%);
+}
+
+.radio {
+    margin-right: 10px;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.493);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.radio:checked {
+    background-color: rgba(255, 0, 242, 0.301);
+}
+
+.preco {
+    color: white;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.alinhar-preco {
+    display: flex;
+    align-items: center;
+    width: 50%;
 }
 
 .bottom {
@@ -139,6 +238,7 @@ h6 {
 .message {
     border: none;
     width: 200px;
+    outline: none;
 }
 
 .button {
@@ -149,7 +249,63 @@ h6 {
     background-color: hsl(271, 36%, 24%);
     color: white;
     font-weight: 700;
+    cursor: pointer;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.button:active {
+    background-color: hsl(271, 30%, 45%);
+}
+
+/* Texto */
+
+.box-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 35px;
+    color: hsl(271, 36%, 24%);
+}
+
+.text {
+    color: hsl(270, 3%, 54%);
+}
+
+/* Footer */
+
+.attribution {
+    font-size: 11px; text-align: center;
+    grid-area: footer;
+}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* Responsive */
+
+@media (max-width: 840px) {
+    .container {
+        grid-template-areas: 
+        "celular"
+        "texto"
+        "footer";
+        justify-items: center;
+        gap: 2rem;
+        height: 95%;
+    }
+    .box-text {
+        align-items: center;
+        justify-items: center;
+        margin: 0;
+    }
+
+    .title {
+        font-size: ;
+    }
+
+    .text {
+        max-width: 80%;
+    }
+}
