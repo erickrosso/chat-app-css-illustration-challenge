@@ -59,11 +59,10 @@ body::before {
     content: "";
     display: inline-block;
     width: 170px;
-    height: 35px;
+    height: 17px;
     background-color: white;
-    border-radius: 100vh;
+    border-radius: 0 0 100vh 100vh;
     position: absolute;
-    transform: translateY(-45%);
 }
 
 .dados {
