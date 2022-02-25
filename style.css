@@ -52,6 +52,7 @@ body::before {
     align-items: center;
     grid-area: celular;
     background-color: hsl(270, 20%, 96%);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.068);
 }
 
 .phone::before {
