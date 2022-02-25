@@ -191,7 +191,7 @@ body::before {
     justify-content: space-around;
     text-align: left;
     color: rgba(255, 255, 255, 0.719);
-    width: 75%;
+    width: 80%;
     line-height: 30px;
     background: rgb(136,56,255);
     background: linear-gradient(90deg, rgba(136,56,255,1) 0%, rgba(233,66,255,1) 100%);
